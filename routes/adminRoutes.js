@@ -11,7 +11,7 @@ router.post('/register', [
   ], adminController.register); //Register a new admin
 
 router.post('/login', [
-    check('username', 'Please include a username').isEmail(), //Check if the username is valid
+    check('username', 'Please include a username').notEmpty(), //Check if the username is valid
     check('password', 'Password is required').exists(), //Check if the password is required
   ], adminController.login); //Login an admin
 
