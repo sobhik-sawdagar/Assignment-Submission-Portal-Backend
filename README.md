@@ -2,7 +2,12 @@
 
 Welcome to the **Assignment Submission Portal** backend system. This backend API allows users to register, submit assignments, and tag admins for review. Admins can manage assignments, accept/reject them with remarks, and view user details.
 
-## Hosted Project for Direct Testing 
+## Flow Diagram
+![flowdiagram](https://github.com/user-attachments/assets/4faf05f0-af2c-4e0a-b51b-07627d446f9b)
+
+
+
+## -> Hosted Project for Direct Testing 
 
 (**Note:** For installing the project locally and other details please refer below:)
 
@@ -33,7 +38,7 @@ You can test the following endpoints directly on the hosted project using **Post
 
 4. **GET** `/user/admins`
 
-   Get a list of admins for tagging assignments.
+   Get a list of admins.
 
 5. **GET** `/user/assignments`
 
@@ -160,7 +165,7 @@ The server should now be running at http://localhost:3000.
 
 4. GET /user/admins
 
-   Get a list of admins for tagging assignments.
+   Get a list of admins.
 
 5. GET /user/assignments
 
