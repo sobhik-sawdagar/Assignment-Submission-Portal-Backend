@@ -176,7 +176,7 @@ MONGODB_URL=mongodb://localhost:27017/assignment_portal
 JWT_SECRET=your_jwt_secret
 ```
 ### 4. Database Setup
-Make sure MongoDB is running. If you are using a local instance, simply start MongoDB with the following command:
+Ensure that MongoDB is running. If you are using a local instance, please refer to the internet for installation instructions based on your operating system.
 
 #### For MongoDB Atlas (cloud-based):
 
