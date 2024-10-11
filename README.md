@@ -75,6 +75,51 @@ You can test the following endpoints directly on the hosted project using **Post
 Authorization: Bearer <your_jwt_token>
 ```
 
+## A Few Examples of How to test the endpoints by sending data: 
+1. User Registration:
+In Request Body - We send the JSON Data as below:
+```json
+{
+    "username" : "testuser01",
+    "email" : "test01@yahpp.com",
+    "password" : "test@123"
+}
+```
+![image](https://github.com/user-attachments/assets/9c64f59a-b438-43cf-a201-89ee2b1940c0)
+
+
+2. User Login:
+We log in using the registered email and password and after successful login, a Token has been generated for us as shown below, we have to enter this token in the Authorization section, Choose Auth Type as Bearer Token and Paste the Token in the Token field.[Shown Below] further access authenticated user endpoints like /user/upload, etc.
+
+![image](https://github.com/user-attachments/assets/a751cce5-08af-4434-94e6-8a25674e93fb)
+
+![image](https://github.com/user-attachments/assets/83ebc4a3-7d97-4188-a92d-738aa64f4a06)
+
+*Note:* There is a similar process for Admin Registration, Login, and Token Generation to access the authenticated admin endpoints; here, we will only use the username and password.
+
+3. Upload an assignment:
+You can upload the assignment by sending the "task" and "adminId" in the request body, "task" is the assignment name and the "adminId" is being sent to tag the particular admin to this assignment.
+```json
+{
+    "task" : "Backend Application using Rust",
+    "adminId" : "6709763efde1c4d7bc8517e4"
+}
+```
+![image](https://github.com/user-attachments/assets/eecb880e-b65e-4c43-8631-3189490d8ad4)
+
+Tip: You can fetch the registered admin's object ID to upload any assignment from the list of admins -> /user/admins.
+
+4. Admin can accept or reject an assignment assigned to them:
+To accept or reject an assignment assigned to an admin, send a remark in the request body and then only the assignment will accepted or rejected.
+```json
+{
+    "remark": "Good job, You have maintained good code readability"
+}
+```
+![image](https://github.com/user-attachments/assets/92a0b8bc-df54-4df7-b5ab-a9b4180b5937)
+
+Tip: To obtain the assignment object ID, the admin can navigate to /admin/assignments to retrieve the assignment details.
+
 ## Features
 - **User Registration & Login** 
 - **Admin Registration & Login**
@@ -106,8 +151,8 @@ Ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/assignment-submission-portal.git
-cd assignment-submission-portal
+git clone https://github.com/sobhik-sawdagar/Assignment-Submission-Portal-Backend.git
+cd Assignment-Submission-Portal-Backend
 ```
 ### 2. Install Dependencies
 Run the following command to install all the necessary dependencies:
