@@ -15,6 +15,8 @@ If you do not want to set up the project locally and prefer testing the endpoint
 
 ### Hosted URL:
 
+*Note:* As it is hosted on Render's free tier, the machine spins down during inactivity. Therefore, the first visit to the URL may take a few seconds to load. Please be patient.
+
 [Assignment Submission Portal - Backend](https://assignment-submission-portal-backend.onrender.com/) - https://assignment-submission-portal-backend.onrender.com/
 
 
